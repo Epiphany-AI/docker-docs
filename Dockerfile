@@ -30,8 +30,8 @@ RUN apk update && apk upgrade --no-cache; \
     luarocks-5.4 install lrexlib-pcre; \
     # Clean up when done.
     rm -rf /tmp/*; \
-    apk del .build-deps \
-    # Dependencies for Django.
+    apk del .build-deps; \
+    # Dependencies for Python + PostgreSQL.
     pip install --upgrade pip && \
     apk add --no-cache \
         wget \
