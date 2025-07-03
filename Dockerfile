@@ -7,6 +7,7 @@ RUN <<EOF
         musl-dev \
         linux-headers \
         libreoffice-writer \
+        libreoffice-impress \
         pandoc-cli \
         fontconfig \
         freetype \
