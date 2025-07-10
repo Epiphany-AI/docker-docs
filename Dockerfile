@@ -38,6 +38,7 @@ RUN <<EOF
 
     # Dependencies for Python + PostgreSQL
     pip install --upgrade pip
+    pip install --upgrade pillow
     apk add --no-cache \
         wget \
         uv \
