@@ -6,6 +6,8 @@ RUN <<EOF
         build-base \
         musl-dev \
         linux-headers \
+        openjdk21-jre-headless \
+        libreoffice-common \
         libreoffice-writer \
         libreoffice-impress \
         pandoc-cli \
