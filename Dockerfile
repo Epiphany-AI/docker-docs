@@ -1,4 +1,4 @@
-FROM python:3.13.11-alpine@sha256:6bf9e7405389a4409832f3adee8a906fbe03982449b9d8df6a323f00109476bb
+FROM python:3.13.11-alpine@sha256:e7e041128ffc3e3600509f508e44d34ab08ff432bdb62ec508d01dfc5ca459f7
 
 RUN <<EOF
     apk update && apk upgrade --no-cache
