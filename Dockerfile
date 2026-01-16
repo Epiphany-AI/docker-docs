@@ -1,3 +1,5 @@
+# hadolint global ignore=DL3013,DL3018,DL3042
+
 FROM python:3.13.11-alpine@sha256:e7e041128ffc3e3600509f508e44d34ab08ff432bdb62ec508d01dfc5ca459f7
 
 RUN <<EOF
