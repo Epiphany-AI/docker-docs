@@ -2,9 +2,6 @@ name: Dockerfile Validation
 
 on:
   pull_request:
-    paths:
-      - 'Dockerfile'
-      - '.dockerignore'
   workflow_dispatch:
 
 jobs:
