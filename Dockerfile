@@ -22,8 +22,7 @@ RUN <<EOF
         ttf-dejavu \
         ttf-droid \
         ttf-freefont \
-        ttf-liberation \
-        weasyprint
+        ttf-liberation
 
     # More fonts
     apk add --no-cache --virtual .build-deps \
@@ -37,16 +36,18 @@ RUN <<EOF
     luarocks-5.4 install lrexlib-pcre
 
     # Dependencies for Python + PostgreSQL
-    pip install --upgrade pip
-    pip install --upgrade "pillow>=12.1.0"
-    pip install --upgrade "weasyprint>=68"
     apk add --no-cache \
         wget \
         uv \
         libmagic \
         postgresql17-client
+    
+    pip install --upgrade pip
+    pip install --upgrade "pillow>=12.1.0"
+    pip install --upgrade "weasyprint>=68"
 
     # Clean up when done
-    rm -rf /tmp/*
     apk del .build-deps
+    rm -rf /tmp/*
+    rm -rf /var/cache/apk/*
 EOF
