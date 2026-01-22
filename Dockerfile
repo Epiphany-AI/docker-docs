@@ -36,17 +36,17 @@ RUN <<EOF
     # Install Lua packages
     luarocks-5.4 install lrexlib-pcre
 
-    # Clean up when done
-    rm -rf /tmp/*
-    apk del .build-deps
-
     # Dependencies for Python + PostgreSQL
     pip install --upgrade pip
-    pip install --upgrade pillow
+    pip install --upgrade "pillow>=12.1.0"
+    pip install --upgrade "weasyprint>=68"
     apk add --no-cache \
         wget \
         uv \
         libmagic \
         postgresql17-client
-    rm -rf /var/cache/apk/*
+
+    # Clean up when done
+    rm -rf /tmp/*
+    apk del .build-deps
 EOF
