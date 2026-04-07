@@ -58,12 +58,13 @@ RUN <<EOF
     rm -rf /var/cache/apk/*
 EOF
 
-# System utilities and PostgreSQL client
+# System utilities and database clients (PostgreSQL, Redis CLI)
 RUN <<EOF
     apk add --no-cache \
         wget \
         uv \
         libmagic \
+        redis \
         postgresql17-client
     rm -rf /var/cache/apk/*
 EOF
