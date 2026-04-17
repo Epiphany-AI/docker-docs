@@ -12,7 +12,8 @@ RUN <<EOF
         musl-dev \
         linux-headers \
         libc-dev \
-        pcre-dev
+        pcre-dev \
+        cargo
     rm -rf /var/cache/apk/*
 EOF
 

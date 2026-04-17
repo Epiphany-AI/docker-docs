@@ -6,6 +6,16 @@
 version: 2
 enable-beta-ecosystems: true
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "chore:"
+    schedule:
+      interval: "weekly"
   - package-ecosystem: "docker"
     directory: "/"
     ignore:
