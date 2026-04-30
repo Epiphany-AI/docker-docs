@@ -19,8 +19,8 @@ EOF
 
 # Ghostscript
 RUN << EOF
-        apk add --no-cache \
-            ghostscript
+    apk add --no-cache \
+        ghostscript
     rm -rf /var/cache/apk/*
 EOF
 
