@@ -17,6 +17,13 @@ RUN <<EOF
     rm -rf /var/cache/apk/*
 EOF
 
+# Ghostscript
+RUN << EOF
+        apk add --no-cache \
+            ghostscript
+    rm -rf /var/cache/apk/*
+EOF
+
 # LibreOffice and Java runtime
 RUN <<EOF
     apk add --no-cache \
