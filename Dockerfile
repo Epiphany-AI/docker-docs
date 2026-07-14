@@ -73,7 +73,7 @@ RUN <<EOF
         uv \
         libmagic \
         redis \
-        postgresql17-client
+        postgresql18-client
     rm -rf /var/cache/apk/*
 EOF
 
