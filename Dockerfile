@@ -24,13 +24,9 @@ RUN <<EOF
     rm -rf /var/cache/apk/*
 EOF
 
-# LibreOffice and Java runtime
+# Pandoc (course exports)
 RUN <<EOF
     apk add --no-cache \
-        openjdk21-jre-headless \
-        libreoffice-common \
-        libreoffice-writer \
-        libreoffice-impress \
         pandoc-cli
     rm -rf /var/cache/apk/*
 EOF
@@ -74,6 +70,17 @@ RUN <<EOF
         libmagic \
         redis \
         postgresql18-client
+    rm -rf /var/cache/apk/*
+EOF
+
+# WeasyPrint system libraries (previously pulled in by LibreOffice)
+RUN <<EOF
+    apk add --no-cache \
+        cairo \
+        gdk-pixbuf \
+        glib \
+        gobject-introspection \
+        pango
     rm -rf /var/cache/apk/*
 EOF
 
