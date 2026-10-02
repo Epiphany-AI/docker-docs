@@ -36,6 +36,7 @@ RUN <<EOF
     apk add --no-cache \
         fontconfig \
         freetype \
+        font-noto-cjk \
         ttf-dejavu \
         ttf-droid \
         ttf-freefont \
