@@ -1,6 +1,6 @@
 # hadolint global ignore=DL3013,DL3018,DL3042
 
-FROM python:3.14-alpine@sha256:003970a263347645cd23d4f90929ad16ba7ce7d808ee4674ffcc93cb21cc289f
+FROM python:3.15-alpine@sha256:1afb480ba8d3b3b7a8439a84f2365ce5c75ac45a79cf07daa091b49235cbe27b
 
 # Only update package listing
 RUN apk update
